@@ -1,6 +1,6 @@
-// 
+//
 // Sections
-// 
+//
 
 section.resume-section {
     display: flex;
@@ -14,11 +14,51 @@ section.resume-section {
     .resume-section-content {
         width: 100%;
     }
+
+    .flight-hours-wrapper {
+        display: flex;
+        flex-direction: row;
+        margin-bottom: 3rem;
+    }
+
+    .flight-hours {
+        display: flex;
+        flex-direction: row;
+        padding-right: 2rem;
+
+        .labels {
+            padding-right: 1rem;
+        }
+    }
+
+    .aircrafts {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+
+        .aircraft {
+            margin-right: 2rem;
+            margin-bottom: 2rem;
+        }
+    }
 }
 
 @include media-breakpoint-up(md) {
     section.resume-section {
         min-height: 100vh;
+    }
+}
+
+
+@include media-breakpoint-down(md) {
+    section.resume-section .flight-hours-wrapper {
+        flex-direction: column;
+
+        .flight-hours {
+            width: 240px;
+            line-height: 28px;
+            justify-content: space-between;
+        }
     }
 }
 
